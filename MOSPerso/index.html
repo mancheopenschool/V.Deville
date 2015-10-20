@@ -14,7 +14,7 @@
     <![endif]-->
 </head>
 <body>
-<nav class="navbar navbar-fixed-top navbar-custom">
+<nav class="navbar navbar-custom navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -23,12 +23,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">MancheOpenSchool</a>
+            <a class="navbar-brand" href="#header">MancheOpenSchool</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
+                <li><a href="#lamos">La mos</a></li>
+                <li><a href="#" >Link</a></li>
                 <li><a href="#">Link</a></li>
             </ul>
         </div>
@@ -37,9 +37,14 @@
 <section id="header">
     <div id="header-filter"></div>
     <div id="header-img"></div>
-    <div class="container-fluid" style="z-index: 99">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12"></div>
+            <div class="col-md-12 text-center">
+                <p id="badas">Clique c'est badass !<br />
+                    <img src="ressources/images/fleche.png" alt="">
+                </p>
+                <a class="btn btn-default btnHeader" href="#lamos">Let's GO !</a>
+            </div>
         </div>
     </div>
     <button onclick="stopBG()" type="button" class="btn btn-default btn-circle btnStop">
@@ -49,9 +54,107 @@
         <i class="fa fa-play"></i>
     </button>
 </section>
+<section id="lamos">
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-md-3 col-xs-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="fa fa-info-circle"></span>
+                        <h2>Formation</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            Les formations dans le secteur <b>numérique</b> présentent sur le territoire, pour la plupart,
+                            ne couvrent pas les <b>réels besoins du marché</b>. Ce n'est pas le cas
+                            de la <b>Manche Open School</b>.
 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="fa fa-map-signs"></span>
+                        <h2>Accompagnement</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            La <b>Manche Open School</b> accompagne au maximum les apprenants.
+                            Les personnes formées, partent dans d’autres régions, ou suivent une formation
+                            intra-entreprise avant d’entrer en production.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="fa fa-users"></span>
+                        <h2>Responsable</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            Vous pourrez créer votre entreprise ou avoir autant de responsabilité en entreprise.
+                            La <b>Manche Open School</b> à pour but de former des profils de responsables
+                            numériques en leur transmettant les compétences techniques nécessaires..
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="fa fa-heartbeat"></span>
+                        <h2>Libre</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            L'open est notre devise, aucune connaissance, aucun diplôme requis pour rejoindre
+                            la <b>Manche Open School</b>.
+                            Comme aux habithudes de la formation tout est ouvert, la motivation et la passion
+                            fera la différence, à vous de jouer !
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="container-fluid">
+                <div class="col-md-12">
+                    <br />
+                    <p class="alert alert-danger alert-warning alert-dismissible">
+                        Les inscriptions sont fermés pour le moment
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <i aria-hidden="true" class="glyphicon glyphicon-remove"></i>
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="progev">
+    <div id="progev-filter"></div>
+    <div id="progev-img"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12"></div>
+        </div>
+    </div>
+</section>
 <script src="ressources/app/bootstrap/js/jquery.min.js"></script>
 <script src="ressources/app/bootstrap/js/bootstrap.min.js"></script>
 <script src="ressources/js/backgroundChanger.js"></script>
+<script src="ressources/js/scrollSpy.js"></script>
 </body>
 </html>
