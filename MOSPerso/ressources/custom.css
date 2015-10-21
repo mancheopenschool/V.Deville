@@ -128,6 +128,150 @@ section{
     background-repeat: repeat;
     z-index: 1;
 }
+#progev-gray{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.4);
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+#programme{
+    margin: 0;
+    padding: 0;
+    min-height: calc(100vh - 30vh);
+    width: 100%;
+}
+#programme-img{
+    background-image: url("./images/programme.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+    border: solid 4px black;
+}
+#programme-filter{
+    background-color: rgba(0,0,0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition-duration: 0.4s;
+    cursor: pointer !important;
+}
+#programme-filter:hover{
+    background-color: rgba(0,0,0, 0.4);
+    transition-duration: 0.4s;
+}
+#programme-button{
+    position: absolute;
+    line-height: calc(100vh - 30vh);
+    font-size: 40px;
+    color: white;
+    width: 100%;
+    left: 50%;
+    top: 0;
+    transition-duration: 0.3s;
+}
+
+
+/*
+=============================
+         ZOOM PHOTO
+=============================
+*/
+
+#zoomPhoto .modal-body{
+    padding: 0;
+}
+@media (min-width: 1200px){
+    #zoomPhoto .modal-dialog{
+        width: 50%;
+    }
+}
+
+/*
+
+/*
+=============================
+       CONTACT / FAQ
+=============================
+*/
+#contactfaq{
+    background-color: #f5f5f5;
+}
+.panel-default{
+    position: relative;
+}
+.panel{
+    margin-top: 20px !important;
+}
+.panel-heading span{
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    left: 95%;
+    color: rgba(0,0,0 0.4) !important;
+    font-size: 18px;
+    line-height: 22px;
+    transform: rotate(180deg);
+    transition-duration: 0.4s;
+}
+.panel-heading.collapsed span{
+    transform: rotate(0deg);
+    transition-duration: 0.4s;
+}
+#contactfaq .collapse p, #contactfaq .collapsing p{
+    padding: 15px;
+    font-size: 14px;
+}
+#contactfaq h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+/*
+=============================
+        FORM CONTACT
+=============================
+*/
+.field-group {
+    padding-top: .2em;
+    padding-bottom: .2em;
+    overflow: hidden;
+    border-radius: 0;
+}
+.field {
+    width: 100%;
+    border: 2px solid #272727;
+    padding: 0 0 0 5px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    resize:none;
+    border-radius: 0;
+    transition-duration: 1s;
+    margin-top: 10px;
+}
+.field:focus{
+    border: 2px solid #ffffff;
+    transition-duration: 1s;
+}
+
+/*
+=============================
+            FOOTER
+=============================
+*/
 
 /*
 =============================
@@ -186,6 +330,49 @@ section{
         padding-right: 0;
     }
 }
+@media (max-width: 1100px) {
+    .navbar-right{
+        margin-right: 10px !important;
+    }
+}
+@media (max-width: 768px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in {
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+}
+
 /*
 =============================
            BOUTON
@@ -273,6 +460,123 @@ section{
 .alert-succes{
     background-color: #2ecc71;
 }
+
+/*
+=============================
+          EVENTS
+=============================
+*/
+
+.event-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition-duration: 0.4s;
+}
+.event-list:hover{
+    transform: scale(1.05);
+    transition-duration: 0.4s;
+}
+.event-list > li {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgb(51, 51, 51);
+    box-shadow: 0 0 5px rgba(51, 51, 51, 0.7);
+    padding: 0;
+    margin: 0 0 20px;
+}
+.event-list > li > time {
+    display: inline-block;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 152, 211);
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.event-list > li:nth-child(even) > time {
+    background-color: rgb(165, 82, 167);
+}
+.event-list > li > time > .day {
+    display: block;
+    font-size: 24pt;
+    font-weight: 100;
+    line-height: 1;
+}
+.event-list > li time > .month {
+    display: block;
+    font-size: 18pt;
+    font-weight: 900;
+    line-height: 1;
+}
+.event-list > li > img {
+    width: 100%;
+}
+.event-list > li > .info {
+    padding-top: 5px;
+    text-align: center;
+}
+.event-list > li > .info > .title {
+    font-size: 17pt;
+    font-weight: 700;
+    margin: 0;
+}
+.event-list > li > .info > .desc {
+    font-size: 10pt;
+    font-weight: 300;
+    margin: 0;
+}
+.event-list > li > .info > ul,
+.event-list > li > .info > ul > li,
+.event-list > li > .info > ul > li > a {
+    display: block;
+    width: 100%;
+    color: rgb(30, 30, 30);
+    text-decoration: none;
+}
+.event-list > li > .info > ul > li:hover,
+.event-list > li {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 80px;
+    padding: 0;
+}
+.event-list > li > time,
+.event-list > li > img  {
+    display: inline-block;
+}
+.event-list > li > time,
+.event-list > li > img {
+    width: 80px;
+    float: left;
+}
+.event-list > li > .info {
+    background-color: rgb(245, 245, 245);
+    overflow: hidden;
+}
+.event-list > li > time,
+.event-list > li > img {
+    width: 120px;
+    height: 80px;
+    padding: 0;
+    margin: 0;
+}
+.event-list > li > .info {
+    position: relative;
+    height: 80px;
+    text-align: left;
+    padding-right: 40px;
+}
+.event-list > li > .info > .title,
+.event-list > li > .info > .desc {
+    padding: 0 10px;
+}
+.event-list > li > .info > ul {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
 /*
 =============================
     SETTINGS FOR SECTION
@@ -284,4 +588,10 @@ section{
 }
 #lamos .row:first-child{
     padding-top: calc(5vh + 50px);
+}
+#progev .row:first-child{
+    padding-top: 20vh;
+}
+#contactfaq .row:first-child{
+    padding-top: 30vh;
 }
