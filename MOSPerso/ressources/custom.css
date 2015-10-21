@@ -91,7 +91,12 @@ section{
 #lamos .alert{
     text-transform: uppercase;
     font-weight: bold;
-    margin-top: 100px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+#lamos h2{
+    max-width: 100%;
+    word-wrap: break-word;
 }
 /*
 =============================
@@ -176,12 +181,23 @@ section{
     line-height: calc(100vh - 30vh);
     font-size: 40px;
     color: white;
-    width: 100%;
+    /*width: 100%;*/
     left: 50%;
     top: 0;
     transition-duration: 0.3s;
 }
-
+@media (max-width: 768px) {
+    #programme, #programme-button{
+        min-height: 100px;
+        line-height: 100px;
+    }
+    #programme-img{
+        display: none;
+    }
+    #programme{
+        margin-bottom: 25px;
+    }
+}
 
 /*
 =============================
