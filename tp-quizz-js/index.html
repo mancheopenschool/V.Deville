@@ -9,14 +9,30 @@
 <h1>Quizz</h1>
 
 <script type="text/javaScript">
+
+    // nQ = Numéro question
+    // Q = Question
+    // R = Réponse réelle
+    // r = Propositions
+
     $(document).ready(function(){
 
-        $.getJSON('question.json', function(json){
-            console.log(json[1].nQuestion);
-            console.log(json[1].Question);
-            console.log(json[1].reponseR);
-            console.log(json[1].reponse);
-            console.log(json[1].reponse[0], json[1].reponse[2]);
+        $.getJSON('./question.json', function(json){
+            var nbrQuestions = Object.keys(json).length;
+            for (var i = 1; i <= nbrQuestions; i++){
+
+                console.log(json[i].nQ);
+
+                $('<p class="question">'+ json[i].Q +'</p>').appendTo($('h1'));
+
+                console.log(json[i].R);
+
+                var nbrReponses = Object.keys(json[i]['r']).length;
+
+                for (var e = 0; e < nbrReponses; e++){
+                    $('<input type="radio" name="' + json[i].nQ + '" checked value="' + json[i].r[e] + '"> ' + json[i].r[e] + '<br />').appendTo($('h1'));
+                }
+            }
         });
 
     });

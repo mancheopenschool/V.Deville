@@ -1,17 +1,42 @@
 {
-  "1":
-  {
-    "nQuestion": "1",
-    "Question": "Question 1 ?",
-    "reponseR": "réponse 2",
-    "reponse": ["réponse 1", "réponse 2", "réponse 3"]
+  "1": {
+    "nQ": "1",
+    "Q": "Question 1 ?",
+    "R": "réponse 2",
+    "r": [
+      "réponse 1",
+      "réponse 2",
+      "réponse 3"
+    ]
   },
-
-  "2":
-  {
-    "nQuestion": "2",
-    "Question": "Question 2 ?",
-    "reponseR": "réponse 3",
-    "reponse": ["réponse 1", "réponse 2", "réponse 3"]
+  "2": {
+    "nQ": "2",
+    "Q": "Question 2 ?",
+    "R": "réponse 3",
+    "r": [
+      "réponse 1",
+      "réponse 2",
+      "réponse 3"
+    ]
+  },
+  "3": {
+    "nQ": "3",
+    "Q": "Question 3 ?",
+    "R": "réponse 3",
+    "r": [
+      "réponse 1",
+      "réponse 2",
+      "réponse 3"
+    ]
+  },
+  "4":{
+    "nQ": "4",
+    "Q": "Question 4 ?",
+    "R": "réponse 1",
+    "r": [
+        "réponse 1",
+        "réponse 2",
+        "réponse 3"
+    ]
   }
 }
