@@ -1,41 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <title>Quizz MOS</title>
 </head>
 <body>
-<h1>Quizz</h1>
+<center>
+    <h1>Quizz</h1>
+    <div class="quizz"></div>
+</center>
 
-<script type="text/javaScript">
 
-    // nQ = Numéro question
-    // Q = Question
-    // R = Réponse réelle
-    // r = Propositions
 
-    $(document).ready(function(){
-
-        $.getJSON('./question.json', function(json){
-            var nbrQuestions = Object.keys(json).length;
-            for (var i = 1; i <= nbrQuestions; i++){
-
-                console.log(json[i].nQ);
-
-                $('<p class="question">'+ json[i].Q +'</p>').appendTo($('h1'));
-
-                console.log(json[i].R);
-
-                var nbrReponses = Object.keys(json[i]['r']).length;
-
-                for (var e = 0; e < nbrReponses; e++){
-                    $('<input type="radio" name="' + json[i].nQ + '" checked value="' + json[i].r[e] + '"> ' + json[i].r[e] + '<br />').appendTo($('h1'));
-                }
-            }
-        });
-
-    });
+<script src="script.js" type="text/javascript"></script>
+<script>
+    getQR(nombreAlea(1, 4));
 </script>
 </body>
 </html>
