@@ -1,0 +1,22 @@
+.color{
+    background-color: red;
+}
+ul li{
+    display: inline-block;
+    background-color: yellow;
+    color: black;
+    height: 50px;
+    padding: 10px;
+}
+ul li a{
+    text-decoration: none;
+}
+
+.hover{
+    background-color: red;
+}
+.carre{
+    background-color: blue;
+    height: 50px;
+    width: 100px;
+}

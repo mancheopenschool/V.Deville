@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <title>Quizz MOS</title>
+</head>
+<body>
+<h1>Quizz</h1>
+
+<script type="text/javaScript">
+    $(document).ready(function(){
+
+        $.getJSON('question.json', function(json){
+            console.log(json[1].nQuestion);
+            console.log(json[1].Question);
+            console.log(json[1].reponseR);
+            console.log(json[1].reponse);
+            console.log(json[1].reponse[0], json[1].reponse[2]);
+        });
+
+    });
+</script>
+</body>
+</html>
