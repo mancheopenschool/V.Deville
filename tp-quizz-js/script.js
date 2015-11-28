@@ -6,9 +6,7 @@
     // Q = Question
     // R = Réponse réelle
     // r = Propositions
-
 $(document).ready(function(){
-
     /*
 
     $.getJSON('./question.json', function(json){
@@ -35,13 +33,9 @@ $(document).ready(function(){
 
 var mettage = $('.quizz');
 
-function nbrQuestions(){
-    var test;
-    $.getJSON('./question.json', function(json){
-        test= Object.keys(json).length;
-    });
-    return test;
-}
+$.getJSON('./question.json',function(json){
+    nbrQ = Object.keys(json).length;
+});
 
 function nombreAlea(min, max){
     return Math.floor(Math.random() * max + min);
@@ -61,6 +55,9 @@ function getReponse(num){
                                                                     //  ^ Rajout d'un identifiant sous forme de chiffre arabe unitaire non décimale propre à la question pour éviter eventuelle bug avec d'autre questions
         }
     })
+}
+function tirageQuestion(){
+    return nombreAlea(1, nbrQ);
 }
 
 function getQR(num){
