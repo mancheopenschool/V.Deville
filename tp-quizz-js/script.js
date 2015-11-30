@@ -56,6 +56,21 @@ function getReponse(num){
         }
     })
 }
+
+function checkR(num, callback){
+    $.getJSON('./question.json', function(json){
+        var rU = $('input[name="' + num + '"]:checked').val();
+
+
+        if (rU == json[num].nQ + json[num].R){
+            callback(true)
+        }
+        else{
+           callback(false)
+        }
+    });
+}
+
 function tirageQuestion(){
     return nombreAlea(1, nbrQ);
 }
