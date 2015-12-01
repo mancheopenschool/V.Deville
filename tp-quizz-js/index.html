@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Quizz MOS</title>
+    <title>Quiz MOS</title>
 </head>
 <body>
 <center>
@@ -13,6 +13,9 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="script.js" type="text/javascript"></script>
 <script>
+    var score = 0;
+    var test;
+    var scoreTemp = 0;
     $('#start').click(function(){
 
         var nTir = tirageQuestion();
@@ -29,17 +32,31 @@
         });
 
         $('#submit').click(function(){
-            var result = checkR(nTir, function test(result){
+            checkR(nTir, function callback(result){
                 if(result == true){
+
+                    getPoint(nTir, function callback2(result){
+                        test = result;
+                        console.log(test);
+                    });
+                    console.log(test);
+                    //console.log('ScoreTemp ' + scoreTemp);
+
+                    //score = score + scoreTemp;
+                    //console.log('Score total = ' + score);
                     nTir = tirageQuestion();
                     getQR(nTir);
                 }
                 else{
-                    console.log('nop')
+                    alert('Nop');
                 }
             });
         });
     });
+
+//    getPoint(1, function(result){
+  //      console.log(result)
+    //});
 
     //getQR(tirageQuestion());
 </script>

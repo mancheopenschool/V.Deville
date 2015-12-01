@@ -3,6 +3,7 @@
     "nQ": "1",
     "Q": "Ou est la mos ?",
     "R": "Granville",
+    "Sc": 20,
     "r": [
       "Granville",
       "Jullouville",
@@ -13,6 +14,7 @@
     "nQ": "2",
     "Q": "Qui est dieu ?",
     "R": "Personne",
+    "Sc": 10,
     "r": [
       "Moi je crois",
       "Moi je suis sur",
@@ -23,6 +25,7 @@
     "nQ": "3",
     "Q": "Pepsi/Coca/Grenadine ?",
     "R": "Grenadine",
+    "Sc": 10,
     "r": [
       "Pepsi",
       "Coca",
@@ -33,6 +36,7 @@
     "nQ": "4",
     "Q": "42 ?",
     "R": "42",
+    "Sc": 10,
     "r": [
         "21",
         "42",

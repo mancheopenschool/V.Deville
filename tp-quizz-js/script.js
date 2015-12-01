@@ -6,31 +6,6 @@
     // Q = Question
     // R = Réponse réelle
     // r = Propositions
-$(document).ready(function(){
-    /*
-
-    $.getJSON('./question.json', function(json){
-     var nbrQuestions = Object.keys(json).length;
-     for (var i = 1; i <= nbrQuestions; i++){
-
-     console.log(json[i].nQ);
-
-     $('<p class="question">'+ json[i].Q +'</p>').appendTo($('div'));
-
-     console.log(json[i].R);
-
-     var nbrReponses = Object.keys(json[i]['r']).length;
-
-     for (var e = 0; e < nbrReponses; e++){
-     $('<input type="radio" name="' + json[i].nQ + '" checked value="' + json[i].r[e] + '"> ' + json[i].r[e] + '<br />').appendTo($('div'));
-     }
-     }
-     });
-
-     */
-
-});
-
 var mettage = $('.quizz');
 
 $.getJSON('./question.json',function(json){
@@ -56,14 +31,19 @@ function getReponse(num){
         }
     })
 }
-
+function getPoint(num, callback){
+    $.getJSON('./question.json', function(json){
+        callback(json[num].Sc)
+    })
+}
 function checkR(num, callback){
     $.getJSON('./question.json', function(json){
         var rU = $('input[name="' + num + '"]:checked').val();
 
-
         if (rU == json[num].nQ + json[num].R){
+
             callback(true)
+
         }
         else{
            callback(false)
