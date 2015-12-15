@@ -1,9 +1,9 @@
 {
   "1": {
     "nQ": "1",
-    "Q": "Ou est la mos ?",
+    "Q": "Dans quelle ville se situe le premier établissement 'Manche Open School' ?",
     "R": "Granville",
-    "Sc": 20,
+    "Sc": 10,
     "r": [
       "Granville",
       "Jullouville",
@@ -12,35 +12,57 @@
   },
   "2": {
     "nQ": "2",
-    "Q": "Qui est dieu ?",
-    "R": "Personne",
+    "Q": "En quelle année la Manche Open School à-t-elle été inaugurée ?",
+    "R": "2015",
     "Sc": 10,
     "r": [
-      "Moi je crois",
-      "Moi je suis sur",
-      "Personne"
+      "2014",
+      "2015",
+      "2013"
     ]
   },
   "3": {
     "nQ": "3",
-    "Q": "Pepsi/Coca/Grenadine ?",
-    "R": "Grenadine",
+    "Q": "Comment sont surnommés les participants de la formation ?",
+    "R": "Bulots codeurs",
     "Sc": 10,
     "r": [
-      "Pepsi",
-      "Coca",
-      "Grenadine"
+      "Poulpes codeurs",
+      "Crabes codeurs",
+      "Bulots codeurs"
     ]
   },
-  "4":{
+  "4": {
     "nQ": "4",
-    "Q": "42 ?",
-    "R": "42",
+    "Q": "Quel est le critère nécessaire afin d'acceder à la formation?",
+    "R": "La motivation",
     "Sc": 10,
     "r": [
-        "21",
-        "42",
-        "99"
+      "La motivation",
+      "Connaître Linux",
+      "Un brevet des collèges"
+    ]
+  },
+  "5": {
+    "nQ": "5",
+    "Q": "Quel est le coût de la formation?",
+    "R": "Gratuite",
+    "Sc": 10,
+    "r": [
+      "Moins de 1000euros",
+      "Gratuite",
+      "Moins de 100euros"
+    ]
+  },
+  "6": {
+    "nQ": "6",
+    "Q": "Que signifie pour vous '42'?",
+    "R": "C'est un nombre",
+    "Sc": 10,
+    "r": [
+      "C'est un nombre",
+      "C'est une école",
+      "C'est La grande question sur la vie, l'univers et le reste"
     ]
   }
 }

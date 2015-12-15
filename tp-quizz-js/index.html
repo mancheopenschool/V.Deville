@@ -7,15 +7,15 @@
 <body>
 <center>
     <h1>Quizz</h1>
-    <div class="quizz"></div>
+    <div class="question"></div>
+    <div class="reponse"></div>
     <button id="start">Démarer le quizz</button>
 </center>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="script.js" type="text/javascript"></script>
 <script>
     var score = 0;
-    var test;
-    var scoreTemp = 0;
+    var scoreTemp2;
     $('#start').click(function(){
 
         var nTir = tirageQuestion();
@@ -34,12 +34,14 @@
         $('#submit').click(function(){
             checkR(nTir, function callback(result){
                 if(result == true){
-
-                    getPoint(nTir, function callback2(result){
-                        test = result;
-                        console.log(test);
+                    getPoint(nTir, function(resultQ){
+                       console.log(resultQ);
+                        scoreTemp2 = resultQ;
                     });
-                    console.log(test);
+
+                    console.log(scoreTemp2);
+
+                    //alert(scoreQ);
                     //console.log('ScoreTemp ' + scoreTemp);
 
                     //score = score + scoreTemp;
